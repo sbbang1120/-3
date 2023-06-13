@@ -1,0 +1,972 @@
+* {
+    outline: 1px solid tomato;
+}
+
+.wrap {}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header.on {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.header h1 {
+    min-width: 220px;
+}
+
+.header .header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 80px;
+}
+
+.gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.gnb a {
+    display: block;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 18px;
+}
+
+.header .cutomer_link {
+    width: 220px;
+}
+
+.header .cutomer_link a {
+    display: block;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+
+.mainVisual {
+    position: relative;
+    z-index: 1;
+
+    border-radius: 0 0 200px 0;
+    overflow: hidden;
+}
+
+.mainVisual::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: rgba(0, 0, 0, 0.7)
+}
+
+
+.mainVisual .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.mainVisual h2 {
+    margin: 0 0 30px 0;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 2px #000;
+}
+
+.mainVisual h2 strong {
+    display: block;
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.mainVisual h2 span {
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.mainVisual p {
+    max-width: 400px;
+    margin: 0 auto;
+    text-shadow: 0 0 3px #000;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+
+}
+
+.mainVisual .mainSlide .itm01 {
+    height: 100vh;
+    background: url(../images/bg_intro01.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .mainSlide .itm02 {
+    height: 100vh;
+    background: url(../images/bg_intro02.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .mainSlide .itm03 {
+    height: 100vh;
+    background: url(../images/bg_intro03.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .slick-dots {
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+}
+
+
+
+.mainVisual .slick-dots>li {
+    display: inline-block;
+    padding: 5px 0;
+    cursor: pointer;
+
+}
+
+.mainVisual .slick-dots>li button {
+    position: relative;
+    width: 80px;
+    height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 2px;
+
+    border: none;
+    font-size: 0;
+}
+
+.mainVisual .slick-dots>li button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff6347;
+}
+
+.mainVisual .slick-dots>li.slick-active button::after {
+    width: 100%;
+    transition: 3s;
+}
+
+.mainVisual .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    max-width: 1400px;
+    width: 100%;
+
+    color: #fff;
+    font-size: 30px;
+}
+
+.mainVisual .arrows i {
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 30px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.mainVisual .arrows .left {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.mainVisual:hover .arrows .left {
+    transform: translate(30px, 0);
+    opacity: 0.8;
+}
+
+.mainVisual .arrows .right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.mainVisual:hover .arrows .right {
+    transform: translate(-30px, 0);
+    opacity: 0.8;
+}
+
+.mainVisual .scroll {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+}
+
+.mainVisual .scroll span {
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.mainVisual .scroll span::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 1px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, 0);
+}
+
+.mainVisual .scroll span::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 3px;
+    height: 3px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+    animation: circle 1s infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(-50%, 0);
+        outline: 3px solid rgba(255, 255, 255, 1);
+    }
+
+    90% {
+        outline: 3px solid rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        transform: translate(-50%, 90px);
+        outline: 3px solid rgba(255, 255, 255, 1);
+    }
+}
+
+.mainContent .tit {
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+.mainContent h2 strong {
+    display: block;
+    font-size: 14px;
+    margin: 0 0 10px 0;
+}
+
+.mainContent h2 span {
+    font-size: 40px;
+    font-weight: 500;
+    color: #886750;
+}
+
+.mainContent .inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px
+}
+
+.mainContent .figure {
+    text-align: center;
+}
+
+.mainContent .img_box {
+    position: relative;
+    margin: 0 0 15px 0;
+}
+
+.mainContent .img_box::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 30px;
+    color: #fff;
+    background: #886750;
+    text-align: center;
+}
+
+
+.mainContent .title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 18px 0;
+}
+
+.mainEvent {
+    padding: 100px 0 400px 0;
+    background: url(../images/bg_main2.jpg) no-repeat left bottom/cover;
+}
+
+.mainEvent h2 {
+    color: #fff;
+}
+
+.mainEvent h2 span {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.mainEvent .tit {
+    margin: 0 auto 27px auto;
+}
+
+.mainEvent .inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px
+}
+
+.mainEvent .itm {
+    padding: 40px 50px;
+    background: rgba(134, 103, 80, 0.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.mainEvent .itm h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.footer {
+    padding: 80px 0;
+    font-size: 12px;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 0 5px 0;
+}
+
+.footer ul>li {
+    position: relative;
+}
+
+.footer ul>li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 2px;
+    background: #ddd;
+}
+
+footer address {
+    text-align: center;
+}
+
+.footer .title {
+    position: relative;
+    font-family: 'Noto Serif KR', serif;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 50px;
+    color: #ddd;
+
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.footer .title span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+
+}
+
+.footer .title span::after {
+    content: "카시아 속초는 대포항 앞바다와 바로 연결";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #333;
+
+    width: 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+    border-right: 1px solid #999;
+    /*transition: 2s;
+    transition-timing-function: steps(6, end);*/
+    animation: tt 3s infinite steps(20, end);
+    /*animation-timing-function: steps(20, end);*/
+}
+
+.footer .title:hover span::after {
+    width: 760px;
+
+}
+
+@keyframes tt {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 760;
+    }
+}
+
+.mopen {
+    display: none;
+}
+
+@media (max-width:768px) {
+    * {
+        outline: 1px solid tomato;
+    }
+
+    .wrap {}
+
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    .header.on {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    .header h1 {
+        position: relative;
+        min-width: 0;
+        z-index: 1000;
+    }
+
+    .header .header_wrap {
+        display: flex;
+        height: 100px;
+        padding: 0 15px;
+    }
+
+    .gnb {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.35);
+        transition: 0.5s;
+    }
+
+    .gnb.on {
+        background: rgba(0, 0, 0, 0.7);
+        left: 0;
+    }
+
+    .gnb>ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        background: #ff6347;
+        height: 100%;
+        width: calc(100% - 90px);
+
+        padding: 150px 15px 0 15px;
+    }
+
+    .gnb.on>ul {}
+
+    .gnb a {
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        line-height: 40px;
+        border-bottom: 1px solid #333;
+    }
+
+    .header .cutomer_link {
+        position: fixed;
+        bottom: 50px;
+        left: 20px;
+        width: 220px;
+    }
+
+    .header .cutomer_link a {
+        color: #fff;
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+
+    .mainVisual {
+        position: relative;
+        z-index: 1;
+
+        border-radius: 0 0 200px 0;
+        overflow: hidden;
+    }
+
+    .mainVisual::after {
+        content: "";
+        position: absolute;
+        inset: 0 0 0 0;
+        background: rgba(0, 0, 0, 0.7)
+    }
+
+
+    .mainVisual .slogan {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .mainVisual h2 {
+        margin: 0 0 30px 0;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 0 2px #000;
+    }
+
+    .mainVisual h2 strong {
+        display: block;
+        margin: 0 0 20px 0;
+        font-size: 3vw;
+        font-weight: 100;
+    }
+
+    .mainVisual h2 span {
+        display: block;
+        font-size: 13vw;
+        font-weight: 700;
+    }
+
+    .mainVisual p {
+        max-width: 400px;
+        margin: 0 auto;
+        text-shadow: 0 0 3px #000;
+        font-size: 15px;
+        color: #fff;
+        text-align: center;
+
+    }
+
+    .mainVisual .mainSlide .itm01 {
+        height: 100vh;
+        background: url(../images/bg_intro01.jpg) no-repeat center center/cover;
+    }
+
+    .mainVisual .mainSlide .itm02 {
+        height: 100vh;
+        background: url(../images/bg_intro02.jpg) no-repeat center center/cover;
+    }
+
+    .mainVisual .mainSlide .itm03 {
+        height: 100vh;
+        background: url(../images/bg_intro03.jpg) no-repeat center center/cover;
+    }
+
+    .mainVisual .slick-dots {
+        position: absolute;
+        bottom: 200px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 999;
+    }
+
+
+
+    .mainVisual .slick-dots>li {
+        display: inline-block;
+        padding: 5px 0;
+        cursor: pointer;
+
+    }
+
+    .mainVisual .slick-dots>li button {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background: #ddd;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 2px;
+
+        border: none;
+        font-size: 0;
+    }
+
+    .mainVisual .slick-dots>li button::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #ff6347;
+    }
+
+    .mainVisual .slick-dots>li.slick-active button::after {
+        width: 100%;
+        transition: 3s;
+    }
+
+    .mainVisual .arrows {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+
+        max-width: 1400px;
+        width: 100%;
+
+        color: #fff;
+        font-size: 30px;
+    }
+
+    .mainVisual .arrows i {
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+        color: #fff;
+        font-size: 30px;
+        opacity: 0.5;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .mainVisual .arrows .left {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .mainVisual:hover .arrows .left {
+        transform: translate(30px, 0);
+        opacity: 0.8;
+    }
+
+    .mainVisual .arrows .right {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .mainVisual:hover .arrows .right {
+        transform: translate(0, 0);
+        opacity: 0.8;
+    }
+
+    .mainVisual .scroll {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translate(0, 0);
+        z-index: 999;
+    }
+
+    .mainVisual .scroll span {
+        position: relative;
+        color: #fff;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .mainVisual .scroll span::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        width: 1px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.5);
+        transform: translate(-50%, 0);
+    }
+
+    .mainVisual .scroll span::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        width: 3px;
+        height: 3px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 50%;
+        transform: translate(-50%, 0);
+        animation: circle 1s infinite;
+    }
+
+    @keyframes circle {
+        0% {
+            transform: translate(-50%, 0);
+            outline: 3px solid rgba(255, 255, 255, 1);
+        }
+
+        90% {
+            outline: 3px solid rgba(255, 255, 255, 1);
+        }
+
+        100% {
+            transform: translate(-50%, 90px);
+            outline: 3px solid rgba(255, 255, 255, 1);
+        }
+    }
+
+    .mainContent .tit {
+        margin: 0 auto 30px auto;
+        text-align: center;
+    }
+
+    .mainContent h2 strong {
+        display: block;
+        font-size: 14px;
+        margin: 0 0 10px 0;
+    }
+
+    .mainContent h2 span {
+        font-size: 40px;
+        font-weight: 500;
+        color: #886750;
+    }
+
+    .mainContent .inner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px
+    }
+
+    .mainContent .figure {
+        text-align: center;
+    }
+
+    .mainContent .img_box {
+        position: relative;
+        margin: 0 0 15px 0;
+    }
+
+    .mainContent .img_box::after {
+        content: attr(data-title);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        line-height: 30px;
+        color: #fff;
+        background: #886750;
+        text-align: center;
+    }
+
+
+    .mainContent .title {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0 0 18px 0;
+    }
+
+    .mainEvent {
+        padding: 100px 0 400px 0;
+        background: url(../images/bg_main2.jpg) no-repeat 20% bottom/cover;
+    }
+
+    .mainEvent h2 {
+        color: #fff;
+    }
+
+    .mainEvent h2 span {
+        display: block;
+        text-align: center;
+        font-size: 4vw;
+        line-height: 1.3;
+    }
+
+    .mainEvent .tit {
+        margin: 0 auto 27px auto;
+    }
+
+    .mainEvent .inner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px
+    }
+
+    .mainEvent .itm {
+        padding: 40px 50px;
+        background: rgba(134, 103, 80, 0.75);
+        color: #fff;
+        text-align: center;
+        border-radius: 30px;
+    }
+
+    .mainEvent .itm h3 {
+        font-size: 4vw;
+        font-weight: 500;
+        margin: 0 0 10px 0;
+    }
+
+    .footer {
+        padding: 80px 0;
+        font-size: 12px;
+    }
+
+    .footer ul {
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        margin: 0 0 10px 0;
+    }
+
+    .footer ul>li {
+        position: relative;
+    }
+
+    .footer ul>li~li::before {
+        display: none;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -15px;
+        transform: translate(-50%, -50%);
+        width: 2px;
+        height: 2px;
+        background: #ddd;
+    }
+
+    footer address {
+        text-align: center;
+    }
+
+    .mopen {
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+    }
+
+    .mopen i {
+        background: #f9f9f9;
+        font-size: 24px;
+        padding: 3px;
+        border-radius: 3px;
+    }
+
+    .mopen span::before {
+        content: "\e91c";
+        font-family: xeicon;
+        display: block;
+        background: #f9f9f9;
+        font-size: 24px;
+        padding: 3px;
+        border-radius: 3px;
+    }
+
+    .mopen.on span::before {
+        content: "\e921";
+        font-family: xeicon;
+        display: block;
+        background: #f9f9f9;
+        font-size: 24px;
+        padding: 3px;
+        border-radius: 3px;
+    }
+
+    .footer .title {
+        position: relative;
+        font-family: 'Noto Serif KR', serif;
+        padding: 30px 0;
+        text-align: center;
+        font-size: 50px;
+        color: #ddd;
+
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    .footer .title span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+
+    }
+
+    .footer .title span::after {
+        content: "카시아 속초는 대포항 앞바다와 바로 연결";
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #333;
+
+        width: 0;
+
+        white-space: nowrap;
+        overflow: hidden;
+
+        border-right: 1px solid #999;
+        /*transition: 2s;
+        transition-timing-function: steps(6, end);*/
+        animation: tt 3s infinite steps(20, end);
+        /*animation-timing-function: steps(20, end);*/
+    }
+
+    .footer .title:hover span::after {
+        width: 760px;
+
+    }
+
+    @keyframes tt {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 760;
+        }
+    }
+}
+
+
+/* 여기서 부터 768
+@media 768
+ */
